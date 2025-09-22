@@ -21,7 +21,7 @@ const containerVariants = {
 
 export default function LandingPage() {
   return (
-    <div className="h-screen w-full relative">
+    <div className="h-screen w-full sticky top-0">
       <nav className="w-full flex justify-between items-center px-24 py-6 text-2xl z-10 absolute top-0 border-b">
         <p className="font-semibold">Aryan Bola</p>
         <div className="flex justify-between items-center gap-4 font-light">
@@ -55,7 +55,7 @@ export default function LandingPage() {
         <p className="text-stroke-3 text-white text-[12rem] -my-24 font-bold">Aryan Bola</p>
         <p className="text-black text-[12rem] font-bold">Aryan Bola</p>
       </div>
-      <div className='w-full flex justify-end px-24 absolute bottom-12 right-0 z-10'>
+      <div className='w-full px-24 absolute bottom-8 left-0 z-10'>
         <motion.div
               whileHover="hover"
               variants={containerVariants}
@@ -75,8 +75,12 @@ export default function LandingPage() {
               </motion.div>
             </motion.div>
       </div>
-      {/* <div className='absolute w-full h-full inset-0 -z-10 py-12 px-[30rem]'>
-        <img src="/bg2.jpg" className='w-full h-full object-fill' alt="" />
+      <div className=' px-24 absolute bottom-8 right-0 z-10'>
+        <p className='text-4xl font-semibold text-black italic'>//Web Developer</p>
+        <p className='text-4xl font-semibold text-black italic'>//Web Designer</p>
+      </div>
+      {/* <div className='absolute w-full h-full inset-0 -z-10 py-12 px-[20rem]'>
+        <img src="/Me.png" className='w-full h-full object-fill' alt="" />
       </div> */}
     </div>
   )
