@@ -21,13 +21,13 @@ const containerVariants = {
 
 export default function LandingPage() {
   return (
-    <div className="h-screen w-full sticky top-0">
+    <div className="h-screen w-full sticky top-0 rounded-2xl bg-white">
       <nav className="w-full flex justify-between items-center px-24 py-6 text-2xl z-10 absolute top-0 border-b">
         <p className="font-semibold">Aryan Bola</p>
         <div className="flex justify-between items-center gap-4 font-light">
           <p className='hover:border border-black px-4 py-1 rounded-3xl'>About</p>
+          <p className='hover:border border-black px-4 py-1 rounded-3xl'>Tech Stack</p>
           <p className='hover:border border-black px-4 py-1 rounded-3xl'>Projects</p>
-          <p className='hover:border border-black px-4 py-1 rounded-3xl'>Designs</p>
           <button>
             <motion.div
               whileHover="hover"
@@ -36,7 +36,7 @@ export default function LandingPage() {
             >
               <motion.div
                 variants={childVariants}
-                className={`bg-black px-4 py-2 text-white`}
+                className={`bg-black px-4 py-2 text-white rounded-3xl`}
               >
                 <p className="text-xl">Let's Talk</p>
               </motion.div>
@@ -50,7 +50,7 @@ export default function LandingPage() {
           </button>
         </div>
       </nav>
-      <div className="flex flex-col justify-center items-center w-full h-full py-20 border border-red-500">
+      <div className="flex flex-col justify-center items-center w-full h-full py-20 px-24">
         <p className="text-black text-[12rem] font-bold">Aryan Bola</p>
         <p className="text-stroke-3 text-white text-[12rem] -my-24 font-bold">Aryan Bola</p>
         <p className="text-black text-[12rem] font-bold">Aryan Bola</p>
@@ -75,7 +75,7 @@ export default function LandingPage() {
               </motion.div>
             </motion.div>
       </div>
-      <div className=' px-24 absolute bottom-8 right-0 z-10'>
+      <div className='px-24 absolute bottom-8 right-0 z-10'>
         <p className='text-4xl font-semibold text-black italic'>//Web Developer</p>
         <p className='text-4xl font-semibold text-black italic'>//Web Designer</p>
       </div>

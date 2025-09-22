@@ -1,12 +1,12 @@
 import { motion } from "motion/react";
 
-export default function About() {
+export default function TechStack() {
   return (
-    <div className="h-screen w-full sticky top-0 bg-white border-t-2 border-black rounded-t-2xl">
-      <div className="py-6 px-8">
+    <div className="h-screen w-full sticky top-0 bg-white border-t-2 border-black rounded-t-[48px]">
+      <div className="py-12 px-8">
         <p className="text-9xl text-semibold">Know about Me </p>
       </div>
-      <div className="p-6 h-[76%]">
+      <div className="p-6 h-[70%]">
         <div className="flex justify-center items-center w-full h-full bg-black rounded-[48px] p-12">
           <img
             src="/Me1.jpeg"
