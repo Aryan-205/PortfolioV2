@@ -68,7 +68,8 @@ export default function TechStack() {
   ];
 
   return (
-    <div className="h-screen w-full sticky top-0 bg-white p-20 flex flex-col border-t border-black">
+    <div className="h-screen w-full sticky top-0 bg-white px-20 pb-12 pt-4 gap-4 flex flex-col border-t border-black">
+      <p className='w-full text-center text-6xl font-semibold'>Tech Stack</p>
       <div className="h-full w-full flex justify items-center border-y border-black">
         <motion.div
           whileHover="hover"
@@ -93,7 +94,7 @@ export default function TechStack() {
               <p className="text-2xl font-bold">Frontend</p>
               <div className='grid grid-cols-2 gap-4'>
                 {skillsData[0].skill.map(s=>(
-                  <div className='border border-white text-white rounded-2xl px-4 py-2'>
+                  <div className='[box-shadow:inset_1px_-1px_4px_0.5px_rgba(255,255,255)] border border-white text-white rounded-2xl px-4 py-2 hover:bg-white hover:text-black'>
                     <p key={s.id}>{s.name}</p>
                   </div>
                 ))}
@@ -124,7 +125,7 @@ export default function TechStack() {
               <p className="text-2xl font-bold">Backend</p>
               <div className='grid grid-cols-2 gap-4'>
                 {skillsData[1].skill.map(s=>(
-                  <div className='border border-white text-white rounded-2xl px-4 py-2'>
+                  <div className='[box-shadow:inset_1px_-1px_4px_0.5px_rgba(255,255,255)] border border-white text-white rounded-2xl px-4 py-2 hover:bg-white hover:text-black'>
                     <p key={s.id}>{s.name}</p>
                   </div>
                 ))}
@@ -155,7 +156,7 @@ export default function TechStack() {
               <p className="text-2xl font-bold">Database</p>
               <div className='grid grid-cols-2 gap-4'>
                 {skillsData[2].skill.map(s=>(
-                  <div className='border border-white text-white rounded-2xl px-4 py-2'>
+                  <div className='[box-shadow:inset_1px_-1px_4px_0.5px_rgba(255,255,255)] border border-white text-white rounded-2xl px-4 py-2 hover:bg-white hover:text-black'>
                     <p key={s.id}>{s.name}</p>
                   </div>
                 ))}
@@ -178,7 +179,7 @@ export default function TechStack() {
           </motion.div>
           <motion.div
             variants={childVariants}
-            className="h-[100%] w-full bg-black flex flex-col justify-between items-center px-8 py-12 text-white relative"
+            className="h-[100%] w-full flex flex-col justify-between items-center px-8 py-12 bg-black text-white relative"
           >
             <p className="text-4xl font-bold">04</p>
             <div className="flex flex-col gap-4">
@@ -186,7 +187,7 @@ export default function TechStack() {
               <p className="text-2xl font-bold">Tools</p>
               <div className='grid grid-cols-2 gap-4'>
                 {skillsData[3].skill.map(s=>(
-                  <div className='border border-white text-white rounded-2xl px-4 py-2'>
+                  <div className='[box-shadow:inset_1px_-1px_4px_0.5px_rgba(255,255,255)] border border-white text-white rounded-2xl px-4 py-2 hover:bg-white hover:text-black'>
                     <p key={s.id}>{s.name}</p>
                   </div>
                 ))}
