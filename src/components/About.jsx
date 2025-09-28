@@ -22,10 +22,10 @@ export default function About() {
               I am a self-taught creative{" "}
               <span className="text-orange-500 italic">
                 {" "}
-                Frontend developer
+                Web Developer
               </span>
               ,{" "}
-              <span className="text-blue-500 font-semibold">Web designer</span>,
+              <span className="text-blue-500 font-semibold">Web Designer</span>,
               and <span className="text-green-500 italic">UI/UX designer</span>{" "}
               based in Delhi, India. I am passionate in catering my works for
               emerging start ups and small businesses that make an impact,

@@ -81,7 +81,7 @@ export default function TechStack() {
             className="h-[100%] w-full bg-white flex flex-col justify-between items-center px-8 py-12 relative"
           >
             <p className="text-4xl font-bold">01</p>
-            <img src="/whitestealth.png" className="w-80 top-32 -right-20 h-auto absolute" alt="" />
+            <img src="/frontendBlack.png" className="w-60 top-32 -right-24 h-auto absolute" alt="" />
             <p className="text-4xl font-semibold">Frontend</p>
           </motion.div>
           <motion.div
@@ -90,11 +90,11 @@ export default function TechStack() {
           >
             <p className="text-4xl font-bold">01</p>
             <div className="flex flex-col gap-4">
-              <img src="/blackstealth.png" className="w-80 top-32 -right-20 h-auto absolute" alt="" />
+              <img src="/frontendWhite.png" className="w-60 top-32 -right-24 h-auto absolute" alt="" />
               <p className="text-2xl font-bold">Frontend</p>
-              <div className='grid grid-cols-2 gap-4'>
+              <div className='grid grid-cols-2 gap-4 z-10'>
                 {skillsData[0].skill.map(s=>(
-                  <div className='[box-shadow:inset_1px_-1px_4px_0.5px_rgba(255,255,255)] border border-white text-white rounded-2xl px-4 py-2 hover:bg-white hover:text-black'>
+                  <div className='[box-shadow:inset_1px_-1px_4px_0.5px_rgba(255,255,255)] bg-black border border-white text-white rounded-2xl px-4 py-2 hover:bg-white hover:text-black'>
                     <p key={s.id}>{s.name}</p>
                   </div>
                 ))}
@@ -112,7 +112,7 @@ export default function TechStack() {
             className="h-[100%] w-full bg-white flex flex-col justify-between items-center px-8 py-12 relative"
           >
             <p className="text-4xl font-bold">02</p>
-            <img src="/whitemissiles.png" className="w-80 top-32 -right-20 h-auto absolute" alt="" />
+            <img src="/backendBlack.png" className="w-60 top-32 -right-24 h-auto absolute" alt="" />
             <p className="text-4xl font-semibold">Backend</p>
           </motion.div>
           <motion.div
@@ -121,11 +121,11 @@ export default function TechStack() {
           >
             <p className="text-4xl font-bold">02</p>
             <div className="flex flex-col gap-4">
-              <img src="/blackmissiles.png" className="w-80 top-32 -right-20 h-auto absolute" alt="" />
+              <img src="/backendWhite.png" className="w-60 top-32 -right-24 h-auto absolute" alt="" />
               <p className="text-2xl font-bold">Backend</p>
               <div className='grid grid-cols-2 gap-4'>
                 {skillsData[1].skill.map(s=>(
-                  <div className='[box-shadow:inset_1px_-1px_4px_0.5px_rgba(255,255,255)] border border-white text-white rounded-2xl px-4 py-2 hover:bg-white hover:text-black'>
+                  <div className='[box-shadow:inset_1px_-1px_4px_0.5px_rgba(255,255,255)] bg-black border border-white text-white rounded-2xl px-4 py-2 hover:bg-white hover:text-black'>
                     <p key={s.id}>{s.name}</p>
                   </div>
                 ))}
@@ -143,7 +143,7 @@ export default function TechStack() {
             className="h-[100%] w-full bg-white flex flex-col justify-between items-center px-8 py-12 relative"
           >
             <p className="text-4xl font-bold">03</p>
-            <img src="/whitesuper.png" className="w-80 top-32 -right-20 h-auto absolute" alt="" />
+            <img src="/databaseBlack.png" className="w-60 top-32 -right-24 h-auto absolute" alt="" />
             <p className="text-4xl font-semibold">Database</p>
           </motion.div>
           <motion.div
@@ -152,7 +152,7 @@ export default function TechStack() {
           >
             <p className="text-4xl font-bold">03</p>
             <div className="flex flex-col gap-4">
-              <img src="/blacksuper.png" className="w-80 top-28 -right-20 h-auto absolute" alt="" />
+              <img src="/databaseWhite.png" className="w-60 top-28 -right-24 h-auto absolute" alt="" />
               <p className="text-2xl font-bold">Database</p>
               <div className='grid grid-cols-2 gap-4'>
                 {skillsData[2].skill.map(s=>(
@@ -174,7 +174,7 @@ export default function TechStack() {
             className="h-[100%] w-full bg-white flex flex-col justify-between items-center px-8 py-12 relative"
           >
             <p className="text-4xl font-bold">04</p>
-            <img src="/whiteradar.png" className="w-80 top-32 -right-20 h-auto absolute" alt="" />
+            <img src="/ToolsBlack.png" className="w-60 top-32 -right-24 h-auto absolute" alt="" />
             <p className="text-4xl font-semibold">Tools</p>
           </motion.div>
           <motion.div
@@ -183,7 +183,7 @@ export default function TechStack() {
           >
             <p className="text-4xl font-bold">04</p>
             <div className="flex flex-col gap-4">
-              <img src="/blackradar.png" className="w-80 top-32 -right-20 h-auto absolute" alt="" />
+              <img src="/ToolsWhite.png" className="w-60 top-32 -right-24 h-auto absolute" alt="" />
               <p className="text-2xl font-bold">Tools</p>
               <div className='grid grid-cols-2 gap-4'>
                 {skillsData[3].skill.map(s=>(

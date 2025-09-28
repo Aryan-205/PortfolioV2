@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import BentoMarquee from './BentoMarquee';
+import DesignGalleryMasonry from './DesignGalleryMansory';
 
 export default function ChoiseSection() {
   const [expanded, setExpanded] = useState(null);
@@ -40,7 +41,7 @@ export default function ChoiseSection() {
   };
 
   return (
-    <div className="h-screen w-full flex sticky top-0 overflow-hidden">
+    <div className="h-screen w-full flex sticky top-0 overflow-hidden border-y border-black">
       
       {/* Design Section */}
       <motion.div
@@ -63,7 +64,7 @@ export default function ChoiseSection() {
             >
               <img src="/left-arrow.png" className="w-10" alt="Left Arrow" />
               <p className="text-6xl font-bold">Design</p>
-              <img src="/design.png" className="w-[60%] h-[60%] hover:scale-105 transition-all duration-300 ease-in-out" alt="Design Icon" />
+              <img src="/design.png" className="w-[60%] h-[60%] hover:scale-105 transition-all duration-300 ease-in-out rounded-l-xl" alt="Design Icon" />
               <div className='w-full py-6 flex justify-start items-center absolute bottom-0 gap-36'>
                 <p className='text-2xl'>UI/UX Department</p>
                 <div className='flex-center w-20 h-20 rounded-full border border-black -rotate-90 p-4'>
@@ -76,7 +77,7 @@ export default function ChoiseSection() {
           {expanded === 'design' && (
             <motion.div
               key="expanded-design-content"
-              className="flex flex-col items-center justify-center p-8 w-full h-full text-black"
+              className="flex flex-col items-center justify-start p-8 w-full h-full overflow-y-auto text-black"
               variants={contentVariants}
               initial="initial"
               animate="animate"
@@ -86,6 +87,11 @@ export default function ChoiseSection() {
               <p className="text-xl max-w-2xl text-center">
                 Explore the world of creative design. From user interfaces to stunning visuals, this section is dedicated to the art and science of bringing ideas to life.
               </p>
+
+              {/* this div */}
+              <div className='w-full flex-grow'>
+                <DesignGalleryMasonry />
+              </div>
               <motion.button
                 className="mt-8 px-8 py-3 bg-gray-200 text-gray-800 rounded-full shadow-lg font-bold hover:bg-gray-300 transition-colors"
                 whileHover={{ scale: 1.05 }}
@@ -104,7 +110,7 @@ export default function ChoiseSection() {
 
       {/* Code Section */}
       <motion.div
-        className="w-full h-full bg-black text-white flex justify-center items-center overflow-hidden cursor-pointer"
+        className="w-full h-full bg-[#141414] text-white flex justify-center items-center overflow-hidden cursor-pointer"
         onClick={() => setExpanded('code')}
         variants={cardVariants}
         initial="initial"
@@ -121,8 +127,8 @@ export default function ChoiseSection() {
               animate="animate"
               exit="exit"
             >
-              <img src="/code.png" className="w-[60%] h-[60%] hover:scale-105 transition-all duration-300 ease-in-out" alt="Code Icon" />
-              <p className="text-6xl font-bold">Code</p>
+              <img src="/code.png" className="w-[56%] h-[60%] border border-white/50 hover:scale-105 transition-all duration-300 ease-in-out rounded-r-xl" alt="Code Icon" />
+              <p className="text-6xl font-bold">Projects</p>
               <img src="/right-arrow.png" className="w-10" alt="Right Arrow" />
               <div className='h-full p-6 absolute right-0 flex flex-col justify-between items-center'>
                 <p className='text-2xl italic'>Create - Build - Deploy</p>
