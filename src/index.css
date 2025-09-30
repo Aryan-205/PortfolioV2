@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 .text-stroke-3 {
-  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+  text-shadow: 0 0 8px black;
+}
+
+.line {
+  line-height: 90%;
 }
 
 .flex-center {
