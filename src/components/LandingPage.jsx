@@ -191,7 +191,7 @@ export default function LandingPage() {
         </motion.nav>
         {/* img */}
         <div className='w-full h-full inset-0 absolute flex justify-center items-center'>
-          <motion.img initial={{scale:5, zIndex:100}} animate={{scale:1, zIndex:0}} transition={{duration:0.8}} src="/bg3.jpeg" className='w-[30rem] h-[35rem]'  alt="" />
+          <motion.img initial={{scale:5, zIndex:100}} animate={{scale:1, zIndex:0}} transition={{duration:0.8}} src="/bg3.jpeg" className='w-[40rem] h-[35rem]'  alt="" />
         </div>
         {/* Central Name */}
         <div className="flex flex-col justify-center items-center w-full h-full px-24 z-10">

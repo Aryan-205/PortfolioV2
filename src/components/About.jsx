@@ -1,6 +1,18 @@
 import { motion } from "motion/react";
+import { useEffect, useState } from "react";
 
 export default function About() {
+
+  const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(new Date());  
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="h-screen w-full sticky top-0 bg-white border-t-2 border-black rounded-t-2xl">
       <div className="py-6 px-8">
@@ -37,6 +49,17 @@ export default function About() {
               challenge. I also enjoy spending time distracting myself by
               reading some cool books, travelling or binge shows.
             </p>
+            <div>
+              <p>
+                {
+                  time.toLocaleTimeString("en-US", {
+                  hour: "numeric",
+                  minute: "2-digit",
+                  second: "2-digit",
+                  hour12: true
+                })}
+              </p>
+            </div>
           </div>
         </div>
       </div>
