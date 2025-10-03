@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import BentoMarquee from './BentoMarquee';
 import DesignGalleryMasonry from './DesignGalleryMansory';
-import DesignSection from './DesignSection';
 
 export default function ChoiseSection() {
   const [expanded, setExpanded] = useState(null);
@@ -42,7 +41,7 @@ export default function ChoiseSection() {
   };
 
   return (
-    <div className="h-screen w-full flex overflow-hidden border-y border-black relative">
+    <div className="h-screen w-full flex overflow-hidden border-y border-black sticky top-0">
       
       {/* Design Section */}
       <motion.div
@@ -76,7 +75,37 @@ export default function ChoiseSection() {
           )}
 
           {expanded === 'design' && (
-            <DesignSection/>
+            <motion.div
+              key="expanded-design-content"
+              className="flex flex-col items-center justify-start p-8 w-full h-full overflow-y-auto text-black"
+              variants={contentVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+            >
+              <div className='h-full w-full flex flex-col justify-between'>
+                <h1 className="text-6xl md:text-8xl font-semibold mb-4 text-start">Projects</h1>
+                <h1 className="text-6xl md:text-8xl font-semibold mb-4 text-end">Creation</h1>
+              </div>
+
+              {/* this div */}
+              <div className='flex justify-center'>
+                <div className='w-full flex-grow'>
+                  <DesignGalleryMasonry />
+                </div>
+              </div>
+              <motion.button
+                className="mt-8 px-8 py-3 bg-gray-200 text-gray-800 rounded-full shadow-lg font-bold hover:bg-gray-300 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setExpanded(null);
+                }}
+              >
+                Go Back
+              </motion.button>
+            </motion.div>
           )}
         </AnimatePresence>
       </motion.div>
