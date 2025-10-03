@@ -68,7 +68,7 @@ export default function TechStack() {
   ];
 
   return (
-    <div className="h-screen w-full sticky top-0 bg-white px-20 pb-12 pt-4 gap-4 flex flex-col border-t border-black">
+    <div className="h-screen w-full relative bg-white px-20 pb-12 pt-4 gap-4 flex flex-col border-t border-black">
       <p className='w-full text-center text-6xl font-semibold'>Tech Stack</p>
       <div className="h-full w-full flex justify items-center border-y border-black">
         <motion.div

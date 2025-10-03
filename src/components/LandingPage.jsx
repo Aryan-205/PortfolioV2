@@ -160,8 +160,8 @@ const childVariants = {
 export default function LandingPage() {
 
   return (
-    <div className="h-screen w-full sticky top-0 rounded-2xl bg-white">
-        <motion.nav initial={{ y: -200 }} animate={{ y: 0 }} transition={{ duration: 0.8 }} className="w-full flex justify-between items-center px-24 py-6 text-2xl z-10 absolute top-0 border-b">
+    <div className="h-screen w-full rounded-t-2xl bg-white relative">
+        <motion.nav initial={{ y: -200 }} animate={{ y: 0 }} transition={{ duration: 0.8 }} className="w-full flex justify-between items-center px-24 py-6 text-2xl z-10 absolute top-0 ">
             <p className="font-semibold">Aryan Bola</p>
             <div className="flex justify-between items-center gap-4 font-light">
                 <p className='hover:border border-black px-4 py-1 rounded-3xl'>About</p>

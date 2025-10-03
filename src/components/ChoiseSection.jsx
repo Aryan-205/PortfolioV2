@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import BentoMarquee from './BentoMarquee';
 import DesignGalleryMasonry from './DesignGalleryMansory';
+import DesignSection from './DesignSection';
 
 export default function ChoiseSection() {
   const [expanded, setExpanded] = useState(null);
@@ -41,7 +42,7 @@ export default function ChoiseSection() {
   };
 
   return (
-    <div className="h-screen w-full flex sticky top-0 overflow-hidden border-y border-black">
+    <div className="h-screen w-full flex overflow-hidden border-y border-black relative">
       
       {/* Design Section */}
       <motion.div
@@ -63,7 +64,7 @@ export default function ChoiseSection() {
               exit="exit"
             >
               <img src="/left-arrow.png" className="w-10" alt="Left Arrow" />
-              <p className="text-6xl font-bold">Design</p>
+              <p className="text-6xl font-bold">Designs</p>
               <img src="/design.png" className="w-[60%] h-[60%] hover:scale-105 transition-all duration-300 ease-in-out rounded-l-xl" alt="Design Icon" />
               <div className='w-full py-6 flex justify-start items-center absolute bottom-0 gap-36'>
                 <p className='text-2xl'>UI/UX Department</p>
@@ -75,35 +76,7 @@ export default function ChoiseSection() {
           )}
 
           {expanded === 'design' && (
-            <motion.div
-              key="expanded-design-content"
-              className="flex flex-col items-center justify-start p-8 w-full h-full overflow-y-auto text-black"
-              variants={contentVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-            >
-              <h1 className="text-6xl md:text-8xl font-bold mb-4">Design</h1>
-              <p className="text-xl max-w-2xl text-center">
-                Explore the world of creative design. From user interfaces to stunning visuals, this section is dedicated to the art and science of bringing ideas to life.
-              </p>
-
-              {/* this div */}
-              <div className='w-full flex-grow'>
-                <DesignGalleryMasonry />
-              </div>
-              <motion.button
-                className="mt-8 px-8 py-3 bg-gray-200 text-gray-800 rounded-full shadow-lg font-bold hover:bg-gray-300 transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setExpanded(null);
-                }}
-              >
-                Go Back
-              </motion.button>
-            </motion.div>
+            <DesignSection/>
           )}
         </AnimatePresence>
       </motion.div>
@@ -158,26 +131,20 @@ export default function ChoiseSection() {
           
           {expanded === 'code' && (
             <motion.div
-              key="expanded-code-content"
-              className="flex flex-col items-center justify-center p-8 w-full h-full text-white"
+              key="expanded-design-content"
+              className="flex flex-col items-center justify-start p-24 w-full h-full overflow-y-auto bg-black"
               variants={contentVariants}
               initial="initial"
               animate="animate"
               exit="exit"
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-                {/* Other bento grid items */}
-                <div className="col-span-1 row-span-1 bg-gray-800 rounded-xl p-4">
-                  {/* ... */}
-                </div>
-
-                {/* The moving image component */}
-                <BentoMarquee />
-
-                {/* More bento grid items */}
+              <div className='h-screen w-full flex flex-col justify-between'>
+                <h1 className="text-6xl md:text-8xl font-semibold mb-4 text-start">Projects</h1>
+                <h1 className="text-6xl md:text-8xl font-semibold mb-4 text-end">Creation</h1>
               </div>
+
               <motion.button
-                className="mt-8 px-8 py-3 bg-gray-800 text-gray-200 rounded-full shadow-lg font-bold hover:bg-gray-700 transition-colors"
+                className="mt-8 px-8 py-3 bg-gray-200 text-gray-800 rounded-full shadow-lg font-bold hover:bg-gray-300 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={(e) => {

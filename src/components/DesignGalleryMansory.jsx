@@ -9,12 +9,15 @@ const designs = Array.from({ length: 21 }, (_, i) => ({
 
 const DesignCard = ({ design }) => {
     return (
-        <div className='pb-4 hover:scale-105 transition-all duration-300 ease-in-out'>
+        <div className='group transition-all duration-300 ease-in-out overflow-hidden relative mb-4'>
             <img 
-                src={design.src} 
-                alt={design.title} 
-                className="w-full h-auto block rounded-md"
+                src={design.src}
+                className="w-full h-auto block object-cover transition-all duration-500 "
             />
+            <div className='absolute inset-0 bg-gradient-to-t from-black/80  to-transparent 
+                flex flex-col justify-end p-6 z-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500'>
+                <p className='text-sm text-gray-300'>Design by <span className="font-medium text-amber-500">Aryan Bola</span></p>
+            </div>
         </div>
     );
 };
@@ -24,7 +27,7 @@ export default function DesignGalleryMasonry() {
         // Added max-w-6xl for better centering and padding-y for breathing room
         <div className="w-full h-full pt-8 pb-16 px-4">
             <div 
-                className="max-w-6xl mx-auto md:columns-4"
+                className="max-w-6xl md:columns-3"
             >
                 {designs.map(design => (
                     <DesignCard key={design.id} design={design} />
