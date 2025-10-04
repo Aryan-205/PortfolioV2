@@ -1,10 +1,59 @@
 import { motion } from 'framer-motion';
 import AnimatedButton from './AnimatedButton';
+import { useEffect, useRef, useState } from 'react';
 
 export default function LandingPage() {
 
+    const [isPlaying, setIsPlaying] = useState(true);
+    // 2. Ref to access the HTML audio element
+    const audioRef = useRef(null); 
+
+    // 3. Effect to set up and start the audio on component mount
+    useEffect(() => {
+        const audio = audioRef.current;
+        if (audio) {
+            // Set up audio properties (e.g., loop)
+            audio.loop = true;
+            audio.volume = 0.5; // Optional: lower the volume
+
+            // Attempt to play, but it will likely be blocked initially.
+            // We need a user interaction to actually start it.
+            const playPromise = audio.play();
+
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    // Playback started successfully
+                    setIsPlaying(true);
+                }).catch(() => {
+                    // Autoplay was prevented. Set state to paused.
+                    setIsPlaying(false);
+                });
+            }
+        }
+    }, []);
+
+    // 4. Toggle function for the button click
+    const togglePlayPause = () => {
+        const audio = audioRef.current;
+        if (audio) {
+            if (isPlaying) {
+                audio.pause();
+                setIsPlaying(false);
+            } else {
+                // Play starts from where it was paused
+                audio.play().then(() => {
+                    setIsPlaying(true);
+                }).catch((error) => {
+                    console.error("Audio playback failed:", error);
+                    // Handle cases where play might still fail
+                });
+            }
+        }
+    };
+
   return (
     <div className="h-screen w-full rounded-t-2xl bg-white relative">
+        <audio ref={audioRef} src="/KennyGSaxSongBird.mp3" autoPlay preload="auto" />
         <motion.nav initial={{ y: -200 }} animate={{ y: 0 }} transition={{ duration: 0.8 }} className="w-full flex justify-between items-center px-24 py-6 text-2xl z-10 absolute top-0 ">
             <p className="font-semibold">Aryan Bola</p>
             <div className="flex justify-between items-center gap-4 font-light">
@@ -70,7 +119,7 @@ export default function LandingPage() {
         </div>
         {/* scroll button */}
         <div className='w-full px-24 absolute bottom-8 left-0 z-10'>
-            <AnimatedButton text={"Let's Talk"} className={"h-[44px] rounded-3xl w-fit"}/>
+            <img onClick={togglePlayPause} src="/record2.png" className='w-40 h-40 animate-spin' alt="" />
         </div>
         {/* Web Developer */}
         <div className='px-24 absolute bottom-8 right-0 z-10 overflow-hidden'>

@@ -1,4 +1,5 @@
 import About from './components/About';
+import ContactMe from './components/ContactMe';
 import DesignSection from './components/DesignSection';
 import DesignSection2 from './components/DesignSection2';
 import LandingPage from './components/LandingPage';
@@ -16,6 +17,7 @@ export default function App() {
       <ProjectsPage/>
       <TechStack/>
       <About/>
+      <ContactMe/>
       {/* <TechStack/> */}
     </div>
   )

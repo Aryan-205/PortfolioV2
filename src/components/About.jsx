@@ -35,7 +35,7 @@ export default function About() {
   return (
     <div className="h-screen w-full relative bg-white border-black">
       <div className="py-6 px-8">
-        <p className="text-9xl text-semibold">Know about Me </p>
+        <p className="text-9xl font-bold tracking-tighter">Know about Me </p>
       </div>
       <div className="p-6 h-[76%]">
         <div className="flex justify-center items-center w-full h-full bg-black rounded-[48px] p-12">
