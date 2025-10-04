@@ -24,8 +24,6 @@ export default function DesignSection(){
       ease: "none"
     });
 
-    
-
     return () => {
       tl.kill();
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
@@ -35,7 +33,7 @@ export default function DesignSection(){
 
   return (
 
-    <div id="section1" className="h-[200vh] w-full bg-black text-white relative">
+    <div id="section1" className="h-[200vh] w-full bg-black text-white relative rounded-t-3xl">
       <div className='sticky top-0 w-full h-screen inset-0 p-24'>
         <div className='h-full w-full flex flex-col justify-between'>
           <p 
@@ -54,21 +52,23 @@ export default function DesignSection(){
         </div>
 
         <div className="absolute z-10 inset-0 w-full h-screen flex justify-center items-center">
-          <div className='h-60 w-40 bg-amber-500 absolute left-[6rem] top-[45%] overflow-hidden'>
-            <img src="/designs/d11.png" className="h-full object-cover" alt="" />
+          <div id="p1" className='h-40 w-60 bg-amber-500 absolute left-[6rem] top-[40%] overflow-hidden'>
+            <img src="/designs/d24.png" className="h-full w-full object-cover" alt="" />
           </div>
-          <div className='h-60 w-40 bg-green-500 absolute left-[24rem] top-[60%] overflow-hidden'>
-            <img src="/designs/d12.png" className="h-full object-cover" alt="" />
+          <div id="p2" className='h-40 w-60 bg-green-500 absolute left-[22rem] top-[60%] overflow-hidden'>
+            <img src="/designs/d25.png" className="h-full w-full object-cover" alt="" />
           </div>
           <div id="imgBox" className='bg-white absolute h-60 w-40 overflow-hidden flex justify-center items-center z-20'>
             <div className="h-full w-full bg-white overflow-hidden flex justify-center">
-              <img src="/designs/d23.png" className="object-cover" alt="" />
+              <img src="/designs/d22.png" className="object-cover" alt="" />
             </div>
           </div>
-          <div className='h-60 w-40 bg-red-500 absolute right-[24rem] top-[15%]'>
-            <img src="/designs/d21.png" className="h-full object-cover" alt="" />
+          <div id="p3" className='h-40 w-60 bg-red-500 absolute right-[22rem] top-[15%]'>
+            <img src="/designs/d26.png" className="h-full w-full object-fill" alt="" />
           </div>
-          <div className='h-60 w-40 bg-yellow-500 absolute right-[6rem] top-[30%]'></div>
+          <div id="p4" className='h-40 w-60 bg-yellow-500 absolute right-[6rem] top-[30%]'>
+            <img src="/designs/d27.png" className="h-full w-full object-fill" alt="" />
+          </div>
         </div>
       </div>
     </div>
