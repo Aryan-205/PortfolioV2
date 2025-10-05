@@ -2,16 +2,19 @@ import { motion } from "motion/react";
 
 export default function ContactMe(){
 
-  // Defined for the 'SEND MAIL' button
   const EMAIL_HREF = 'mailto:aaryann5002@gmail.com'; 
 
   return (
-    <section id='section' className="h-screen bg-white text-black px-24 py-8 font-sans flex border-t border-black">
-      <div className="h-full flex flex-col justify-between ">
-        <p className="text-4xl font-bold text-white w-fit px-4 py-2 tracking-tighter bg-black">Contact Me</p>
+    // Reduced padding and main container to flex-col on small screens
+    <section id='section' className="h-full md:h-screen bg-white text-black px-6 md:px-24 py-8 font-sans flex flex-col md:flex-row border-t border-black">
+      
+      {/* Contact Links Column - Adjusted height and alignment */}
+      <div className="h-full flex flex-col justify-start md:justify-between w-full md:w-auto">
+        {/* Reduced heading size */}
+        <p className="text-xl md:text-4xl font-bold text-white w-fit px-2 py-1 md:px-4 md:py-2 tracking-tighter bg-black mb-8 md:mb-0">Contact Me</p>
         
-        {/* List of Contact Links - Hardcoded without map/li */}
-        <div className="flex flex-col justify-center gap-8 items-start h-full w-full">
+        {/* List of Contact Links - Reduced gap and text size */}
+        <div className="flex flex-col justify-start md:justify-center gap-4 md:gap-8 items-start h-full w-full">
             <motion.a
               initial={{scale:2,opacity:0}}
               whileInView={{scale:1, opacity:1}}
@@ -25,7 +28,8 @@ export default function ContactMe(){
                 lineHeight: 1.1,
               }}
             >
-              <p className="text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase text-black hover:text-white hover:bg-black transition duration-300">
+              {/* Reduced text size */}
+              <p className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase text-black hover:text-white hover:bg-black transition duration-300">
                 EMAIL
               </p>
             </motion.a>
@@ -43,7 +47,8 @@ export default function ContactMe(){
                 lineHeight: 1.1,
               }}
             >
-              <p className="text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase text-black hover:text-white hover:bg-black transition duration-300">
+              {/* Reduced text size */}
+              <p className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase text-black hover:text-white hover:bg-black transition duration-300">
                 LINKEDIN
               </p>
             </motion.a>
@@ -61,7 +66,8 @@ export default function ContactMe(){
                 lineHeight: 1.1,
               }}
             >
-              <p className="text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase text-black hover:text-white hover:bg-black transition duration-300">
+              {/* Reduced text size */}
+              <p className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase text-black hover:text-white hover:bg-black transition duration-300">
                 GITHUB
               </p>
             </motion.a>
@@ -80,23 +86,28 @@ export default function ContactMe(){
               }}
               className="relative"
             >
-              <p className="text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase text-black hover:text-white hover:bg-black transition duration-300">
+              {/* Reduced text size */}
+              <p className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase text-black hover:text-white hover:bg-black transition duration-300">
                 TWITTER
               </p>
-              <p className="absolute bg-black text-white -bottom-7 right-0 p-1">Most Active</p>
+              {/* Reduced text and padding */}
+              <p className="absolute bg-black text-white -bottom-7 md:-bottom-8 right-0 p-1 text-xs md:text-base">Most Active</p>
             </motion.a>
         </div>
 
-        <div className="">
+        {/* Send Mail Button - Reduced padding and font size */}
+        <div className="pt-8 md:pt-0">
           <a
             href={EMAIL_HREF}
-            className="inline-block px-8 py-4 border-4 border-black bg-black text-white text-xl md:text-2xl font-extrabold uppercase tracking-wider  hover:bg-gray-800 transition duration-300"
+            className="inline-block px-6 py-3 md:px-8 md:py-4 border-4 border-black bg-black text-white text-base md:text-2xl font-extrabold uppercase tracking-wider  hover:bg-gray-800 transition duration-300"
           >
             SEND MAIL
           </a>
         </div>
       </div>
-      <div className="flex justify-center tracking-tight text-xl md:text-6xl flex-col items-end gap-8 font-light w-full">
+      
+      {/* Message Column - Reduced text size and width */}
+      <div className="flex justify-start md:justify-center tracking-tight text-2xl md:text-6xl flex-col items-start md:items-end gap-4 md:gap-8 font-light w-full pt-12 md:pt-0">
         <motion.p
           initial={{scale:2,opacity:0}}
           whileInView={{scale:1, opacity:1}}
@@ -122,7 +133,7 @@ export default function ContactMe(){
           initial={{scale:2,opacity:0}}
           whileInView={{scale:1, opacity:1}}
           transition={{duration:1, ease:"easeInOut"}}
-          className="w-[40rem] text-end"
+          className="w-full md:w-[40rem] text-start md:text-end text-base md:text-2xl"
         >
           Find me across the web, or drop me a direct line.
         </motion.p>

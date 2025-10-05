@@ -34,17 +34,17 @@ export default function DesignSection(){
   return (
 
     <div id="section1" className="h-[200vh] w-full bg-black text-white relative rounded-t-3xl">
-      <div className='sticky top-0 w-full h-screen inset-0 p-24'>
+      <div className='sticky top-0 w-full h-screen inset-0 p-8 md:p-24'>
         <div className='h-full w-full flex flex-col justify-between'>
           <p 
-            className="font-extrabold leading-none tracking-tight uppercase text-8xl text-start"
+            className="font-extrabold leading-none tracking-tight uppercase text-5xl md:text-8xl text-start"
             style={{ letterSpacing: '-0.05em' }} 
           >
             Designs
           </p>
 
           <p 
-            className="font-extrabold leading-none tracking-widest uppercase text-8xl text-end"
+            className="font-extrabold leading-none tracking-widest uppercase text-5xl md:text-8xl text-end"
             style={{ letterSpacing: '-0.05em' }}
           >
             That Inspire
@@ -52,10 +52,10 @@ export default function DesignSection(){
         </div>
 
         <div className="absolute z-10 inset-0 w-full h-screen flex justify-center items-center">
-          <div id="p1" className='h-40 w-60 bg-amber-500 absolute left-[6rem] top-[40%] overflow-hidden'>
+          <div id="p1" className='h-20 md:h-40 w-40 md:w-60 bg-amber-500 absolute left-10 md:left-[6rem] top-24 md:top-[40%] overflow-hidden'>
             <img src="/designs/d24.png" className="h-full w-full object-cover" alt="" />
           </div>
-          <div id="p2" className='h-40 w-60 bg-green-500 absolute left-[22rem] top-[60%] overflow-hidden'>
+          <div id="p2" className='h-20 md:h-40 w-40 md:w-60 bg-green-500 absolute left-10 md:left-[22rem] top-[80%] md:top-[60%] overflow-hidden'>
             <img src="/designs/d25.png" className="h-full w-full object-cover" alt="" />
           </div>
           <div id="imgBox" className='bg-white absolute h-60 w-40 overflow-hidden flex justify-center items-center z-20'>
@@ -63,10 +63,10 @@ export default function DesignSection(){
               <img src="/designs/d22.png" className="object-cover" alt="" />
             </div>
           </div>
-          <div id="p3" className='h-40 w-60 bg-red-500 absolute right-[22rem] top-[15%]'>
+          <div id="p3" className='h-20 md:h-40 w-40 md:w-60 bg-red-500 absolute right-10 md:right-[22rem] top-[12rem] md:top-[15%]'>
             <img src="/designs/d26.png" className="h-full w-full object-fill" alt="" />
           </div>
-          <div id="p4" className='h-40 w-60 bg-yellow-500 absolute right-[6rem] top-[30%]'>
+          <div id="p4" className='h-20 md:h-40 w-40 md:w-60 bg-yellow-500 absolute right-10 md:right-[6rem] top-[36rem] md:top-[30%]'>
             <img src="/designs/d27.png" className="h-full w-full object-fill" alt="" />
           </div>
         </div>

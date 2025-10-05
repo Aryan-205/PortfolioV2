@@ -38,7 +38,7 @@ export default function DesignGalleryMasonry() {
         // Added max-w-6xl for better centering and padding-y for breathing room
         <div className="w-full h-full pt-8 pb-16 px-4">
             <div 
-                className="max-w-6xl md:columns-4"
+                className="max-w-6xl columns-2 md:columns-4"
             >
                 {designs.map(design => (
                     <DesignCard key={design.id} design={design} />
