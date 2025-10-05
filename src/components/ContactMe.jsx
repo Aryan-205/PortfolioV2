@@ -83,7 +83,7 @@ export default function ContactMe(){
               <p className="text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase text-black hover:text-white hover:bg-black transition duration-300">
                 TWITTER
               </p>
-              <p className="absolute bg-black text-white -bottom-6 right-0 p-1">Mainly Active</p>
+              <p className="absolute bg-black text-white -bottom-7 right-0 p-1">Most Active</p>
             </motion.a>
         </div>
 
