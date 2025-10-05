@@ -9,38 +9,38 @@ export default function PreChoise(){
 
     useEffect(() => {
 
-    const elements = ["#p1", "#p2", "#p3"];
+      const elements = ["#p1", "#p2", "#p3"];
 
-    gsap.set(elements, { 
-      y: '100vh',
-      scale: 10, 
-      opacity: 0
-    });
+      gsap.set(elements, { 
+        y: '100vh',
+        scale: 10, 
+        opacity: 0
+      });
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#section",
-        start: "top bottom",
-        end: "bottom bottom",
-        scrub: 1,
-      }
-    });
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#section",
+          start: "top bottom",
+          end: "bottom bottom",
+          scrub: 1,
+        }
+      });
 
-    tl.to(elements, {
-      y: 0, 
-      scale: 1,
-      opacity: 1,
-      duration: 1,
-      stagger: 0.5,
-      ease: "power2.out"
-    });
+      tl.to(elements, {
+        y: 0, 
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.5,
+        ease: "power2.out"
+      });
 
-    return () => {
-      tl.kill(); 
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill()); 
-    };
+      return () => {
+        tl.kill(); 
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill()); 
+      };
 
-  }, []);
+    }, []);
 
   return (
     <>
