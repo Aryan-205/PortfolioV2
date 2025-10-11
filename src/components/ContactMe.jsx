@@ -6,7 +6,7 @@ export default function ContactMe(){
 
   return (
     // Reduced padding and main container to flex-col on small screens
-    <section id='section' className="h-full md:h-screen bg-white text-black px-6 md:px-24 py-8 font-sans flex flex-col md:flex-row border-t border-black">
+    <section id='section' className="h-full md:h-screen bg-white text-black px-6 md:px-24 py-8 font-sans flex flex-col md:flex-row border-t border-black overflow-hidden">
       
       {/* Contact Links Column - Adjusted height and alignment */}
       <div className="h-full flex flex-col justify-start md:justify-between w-full md:w-auto">
@@ -133,7 +133,7 @@ export default function ContactMe(){
           initial={{scale:2,opacity:0}}
           whileInView={{scale:1, opacity:1}}
           transition={{duration:1, ease:"easeInOut"}}
-          className="w-full md:w-[40rem] text-start md:text-end text-base md:text-2xl"
+          className="w-full md:w-[40rem] text-start md:text-end"
         >
           Find me across the web, or drop me a direct line.
         </motion.p>

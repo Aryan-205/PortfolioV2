@@ -1,6 +1,5 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import DesignGalleryMasonry from './DesignGalleryMansory';
 import { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -14,7 +13,6 @@ export default function DesignSection(){
         start: "top top",
         end: "bottom bottom",
         scrub: true,
-        markers:true
       }
     });
 

@@ -18,7 +18,6 @@ export default function App() {
       <TechStack/>
       <About/>
       <ContactMe/>
-      {/* <TechStack/> */}
     </div>
   )
 }
