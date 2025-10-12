@@ -58,7 +58,7 @@ export default function DesignSection(){
           </div>
           <div id="imgBox" className='bg-white absolute h-60 w-40 overflow-hidden flex justify-center items-center z-20'>
             <div className="h-full w-full bg-white overflow-hidden flex justify-center">
-              <img src="/designs/d22.png" className="object-cover" alt="" />
+              <img src="/designs/Iphone.png" className="object-cover" alt="" />
             </div>
           </div>
           <div id="p3" className='h-[100px] md:h-40 w-40 md:w-60 bg-red-500 absolute right-8 md:right-[22rem] top-[10rem] md:top-[15%]'>

@@ -29,13 +29,27 @@ const projectData = [
   },
   {
     id: 5,
+    title: "PathClipper",
+    description: "A tool that solve the difficulty of path clip",
+    imageSrc: "/projects/pathclipper.png",
+    url: "https://path-clipper.vercel.app/", 
+  },
+  {
+    id: 6,
+    title: "XCard",
+    description: "A tool that helps you simply create X card for yourself",
+    imageSrc: "/projects/Xcard.png",
+    url: "https://rento-beta.vercel.app/", 
+  },
+  {
+    id: 7,
     title: "TrackO",
     description: "Community live location tracking website",
     imageSrc: "/projects/TrackO.png",
     url: "https://portfolio-v2-coral-kappa.vercel.app/", 
   },
   {
-    id: 6,
+    id: 8,
     title: "BolaBits",
     description: "An Component liberary with animated Icons and microinteraction",
     imageSrc: "/projects/ComponentLib.png",
@@ -60,9 +74,9 @@ const ProjectItem = ({ title, description, imageSrc, url }) => (
 export default function ProjectsPage() {
   return (
     <>
-      <div className="h-[250vh] md:h-[500vh] w-full bg-black p-6 md:p-24 rounded-t-3xl ">
+      <div className="h-[300vh] md:h-[600vh] w-full bg-black p-6 md:p-24 rounded-t-3xl ">
         
-        <div className="h-[100vh] z-20 w-full md:w-fit sticky top-0">
+        <div className="h-[100vh] z-20 w-fit sticky top-0">
           <div className="border-l border-white w-full h-full flex justify-start items-center">
             <div className="pl-4 backdrop-blur-sm rounded-xl">
               <p className="w-full text-6xl md:text-[20rem] text-white/50 font-bold ">20</p>

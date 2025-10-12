@@ -3,7 +3,7 @@
 import React from 'react';
 import {motion} from "motion/react"
 
-const designs = Array.from({ length: 21 }, (_, i) => ({
+const designs = Array.from({ length: 29 }, (_, i) => ({
   id: i + 1,
   src: `/designs/d${i + 1}.png`, 
 }));
