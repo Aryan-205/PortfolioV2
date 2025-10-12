@@ -60,7 +60,7 @@ export default function LandingPage() {
                 <p className="font-bold text-lg md:text-2xl">Aryan Bola</p>
                 <div className="flex justify-between items-center space-x-2 md:space-x-4 font-light">
                     {['About', 'Tech Stack', 'Projects'].map((item) => (
-                        <p key={item} className='hidden sm:block hover:text-gray-300 transition duration-300 cursor-pointer px-2 py-1 md:px-4 md:py-1 rounded-full'>
+                        <p key={item} className='hidden sm:block hover:border-black hover:border transition duration-300 cursor-pointer px-2 py-1 md:px-4 md:py-1 rounded-full'>
                             {item}
                         </p>
                     ))}

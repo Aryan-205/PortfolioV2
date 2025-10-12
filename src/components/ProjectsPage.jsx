@@ -2,11 +2,11 @@ export default function ProjectsPage(){
   return (
     <>
     {/* Reduced padding */}
-    <div className="h-[500vh] w-full bg-black p-6 md:p-24 rounded-t-3xl">
+    <div className="h-[300vh] md:h-[500vh] w-full bg-black p-6 md:p-24 rounded-t-3xl">
       {/* Sticky Sidebar Section */}
       <div className="h-[100vh] z-20 w-full md:w-fit sticky top-0">
         <div className="border-l border-white w-full h-full flex justify-start items-center">
-          <div className="pl-4">
+          <div className="pl-4 backdrop-blur-sm">
             {/* Reduced text sizes */}
             <p className="w-full text-6xl md:text-[20rem] text-white font-bold ">20</p>
             <p className="w-full h-full text-white text-3xl md:text-6xl font-bold uppercase text-center">Projects</p>
@@ -16,7 +16,7 @@ export default function ProjectsPage(){
       </div>
       
       {/* Projects List - Position and alignment adjusted for mobile */}
-      <div className="flex flex-col items-start md:items-end justify-start gap-8 sticky top-0 z-10 -mt-[100vh] pt-[100vh] md:pt-0">
+      <div className="flex flex-col items-start md:items-end justify-start gap-8 sticky top-0 z-10 -mt-[100vh]  md:pt-0">
         <div className="w-full md:w-[60%] p-2 md:p-4 border-b border-white">
           <img src="/projects/Windows.png" className="w-full" alt="" />
           {/* Reduced text sizes */}
