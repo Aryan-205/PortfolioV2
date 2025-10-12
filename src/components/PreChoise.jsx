@@ -9,7 +9,7 @@ export default function PreChoise(){
         <div className='flex flex-col justify-between'>
           <div className='flex justify-between'>
             <motion.p 
-              initial={{scale:2,opacity:0}}
+              initial={{scale:1.5,opacity:0}}
               whileInView={{scale:1, opacity:1}}
               transition={{duration:1, ease:"easeInOut"}}
               className='text-5xl md:text-9xl font-bold'
@@ -17,7 +17,7 @@ export default function PreChoise(){
               01
             </motion.p>
             <motion.p 
-              initial={{scale:2,opacity:0}}
+              initial={{scale:1.5,opacity:0}}
               whileInView={{scale:1, opacity:1}}
               transition={{duration:1, ease:"easeInOut"}}
               className='text-5xl md:text-9xl font-light'
@@ -27,7 +27,7 @@ export default function PreChoise(){
           </div>
           <div className='flex justify-between'>
             <motion.p 
-              initial={{scale:2,opacity:0}}
+              initial={{scale:1.5,opacity:0}}
               whileInView={{scale:1, opacity:1}}
               transition={{duration:1, ease:"easeInOut"}}
               className='text-5xl md:text-9xl font-bold'
@@ -35,7 +35,7 @@ export default function PreChoise(){
               02
             </motion.p>
             <motion.p 
-              initial={{scale:2,opacity:0}}
+              initial={{scale:1.5,opacity:0}}
               whileInView={{scale:1, opacity:1}}
               transition={{duration:1, ease:"easeInOut"}}
               className='text-5xl md:text-9xl font-light'

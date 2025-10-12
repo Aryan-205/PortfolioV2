@@ -45,31 +45,19 @@ export default function About() {
   }, [isInView, animate]); 
 
   return (
-    // Height adjusted to be full on medium screens, auto on small screens
-    <div className="h-full md:h-screen w-full relative bg-white border-black overflow-hidden">
-      {/* Reduced padding */}
+    <div className="h-full md:h-screen w-full relative bg-white overflow-hidden">
       <div className="py-6 px-6 md:px-8">
-        {/* Reduced text size */}
         <p className="text-6xl md:text-9xl font-bold tracking-tighter">Know about Me </p>
       </div>
-      {/* Reduced padding */}
       <div className="p-4 md:p-6 h-full md:h-[76%]">
-        {/* Layout change: flex-col on mobile, flex on medium screens, reduced padding */}
         <div className="flex flex-col md:flex-row justify-center items-center w-full h-full bg-black rounded-[24px] md:rounded-[48px] p-6 md:p-12">
-          
-          {/* Image - Hidden on small screens, shown on medium and up, reduced height for mobile */}
           <img
             src="/Me1.jpeg"
             className="hidden md:block md:h-full rounded-l-2xl object-cover w-full md:w-auto"
             alt="Aryan Bola"
           />
-          
-          {/* Text Content - Full width on mobile, reduced padding and gap */}
-          <div className="w-full h-full pt-4 md:pt-0 md:pl-6 text-white flex flex-col justify-between items-start gap-4 md:gap-12">
-            {/* Reduced text size */}
+          <div className="w-full h-full pt-4 md:pt-0 md:pl-6 text-white flex flex-col justify-between items-start gap-4 md:gap-12 z-10">
             <p className="text-2xl md:text-4xl font-semibold">Who am I?</p>
-            
-            {/* Reduced gap and text size */}
             <div className="flex flex-col gap-3 md:gap-4">
               <p className="text-base md:text-xl font-light">
                 Hi, I am <span className="text-orange-500">Aryan Bola</span>, 20 years old and a 2nd year student at Kirori Mal College, DU
@@ -77,10 +65,9 @@ export default function About() {
               <p className="text-base md:text-xl font-light">
                 I am a self-taught creative{" "}
                 <span className="text-orange-500 italic"> Web Developer</span>,{" "}
-                <span className="text-blue-500 font-semibold">Web Designer</span>,
+                <span className="text-blue-500 italic">Web Designer</span>,
                 and <span className="text-green-500 italic">UI/UX designer</span>{" "}
-                based in Delhi, India. I am passionate in catering my works for
-                emerging start ups and small businesses that make an impact,
+                based in Delhi, India, Origanally from Jhunjhunu, Rajasthan I am passionate in catering my works for emerging start ups and small businesses that make an impact,
                 inspire and connect with people.
               </p>
               <p className="text-base md:text-xl font-light">
@@ -91,7 +78,6 @@ export default function About() {
               </p>
             </div>
             
-            {/* Meta and SVG container */}
             <div className="flex flex-col md:flex-row justify-between w-full gap-4 text-xl md:text-2xl font-extralight pt-4 md:pt-0">
               <div className="flex flex-col md:flex-row gap-4">
                 <p className="flex items-center gap-2">
@@ -107,8 +93,6 @@ export default function About() {
                   <MdMyLocation />
                   Delhi, India</p>
               </div>
-              
-              {/* SVG Signature - Reduced size and adjusted position for mobile */}
               <div ref={svgContainerRef} className="absolute bottom-4 right-4 md:bottom-10 md:right-20 z-50">
                 <motion.svg 
                     ref={scope} 
@@ -165,6 +149,11 @@ export default function About() {
                     </defs>
                 </motion.svg>
               </div>
+              <img
+                src="/Me1.jpeg"
+                className="absolute bottom-12 right-12 w-20 h-auto md:hidden rounded-2xl object-cover"
+                alt="Aryan Bola"
+              />
             </div>
           </div>
         </div>

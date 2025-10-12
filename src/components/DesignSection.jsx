@@ -50,10 +50,10 @@ export default function DesignSection(){
         </div>
 
         <div className="absolute z-10 inset-0 w-full h-screen flex justify-center items-center">
-          <div id="p1" className='h-20 md:h-40 w-40 md:w-60 bg-amber-500 absolute left-10 md:left-[6rem] top-24 md:top-[40%] overflow-hidden'>
+          <div id="p1" className='h-[100px] md:h-40 w-40 md:w-60 bg-amber-500 absolute left-8 md:left-[6rem] top-24 md:top-[40%] overflow-hidden'>
             <img src="/designs/d24.png" className="h-full w-full object-cover" alt="" />
           </div>
-          <div id="p2" className='h-20 md:h-40 w-40 md:w-60 bg-green-500 absolute left-10 md:left-[22rem] top-[80%] md:top-[60%] overflow-hidden'>
+          <div id="p2" className='h-[100px] md:h-40 w-40 md:w-60 bg-green-500 absolute left-10 md:left-[22rem] top-[78%] md:top-[60%] overflow-hidden'>
             <img src="/designs/d25.png" className="h-full w-full object-cover" alt="" />
           </div>
           <div id="imgBox" className='bg-white absolute h-60 w-40 overflow-hidden flex justify-center items-center z-20'>
@@ -61,10 +61,10 @@ export default function DesignSection(){
               <img src="/designs/d22.png" className="object-cover" alt="" />
             </div>
           </div>
-          <div id="p3" className='h-20 md:h-40 w-40 md:w-60 bg-red-500 absolute right-10 md:right-[22rem] top-[12rem] md:top-[15%]'>
+          <div id="p3" className='h-[100px] md:h-40 w-40 md:w-60 bg-red-500 absolute right-8 md:right-[22rem] top-[10rem] md:top-[15%]'>
             <img src="/designs/d26.png" className="h-full w-full object-fill" alt="" />
           </div>
-          <div id="p4" className='h-20 md:h-40 w-40 md:w-60 bg-yellow-500 absolute right-10 md:right-[6rem] top-[36rem] md:top-[30%]'>
+          <div id="p4" className='h-[100px] md:h-40 w-40 md:w-60 bg-yellow-500 absolute right-7 md:right-[6rem] top-[36rem] md:top-[30%]'>
             <img src="/designs/d27.png" className="h-full w-full object-fill" alt="" />
           </div>
         </div>

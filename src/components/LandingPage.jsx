@@ -49,7 +49,7 @@ const NameBlock = ({ text, isStroke }) => {
 export default function LandingPage() {
 
     return (
-        <div className="min-h-screen w-full bg-white relative flex flex-col overflow-hidden">
+        <div className="h-[90vh] md:h-screen w-full bg-white relative flex flex-col overflow-hidden">
             {/* Navigation */}
             <motion.nav 
                 initial={{ y: -100, opacity: 0 }} 
@@ -57,14 +57,16 @@ export default function LandingPage() {
                 transition={{ duration: 0.5 }} 
                 className="w-full flex justify-between items-center px-4 md:px-12 py-6 text-sm md:text-xl z-20 absolute top-0 bg-transparent text-black"
             >
-                <p className="font-bold text-lg md:text-2xl">Aryan Bola</p>
+                <p className="font-light tracking-wide text-xl md:text-2xl">Aryan Bola</p>
                 <div className="flex justify-between items-center space-x-2 md:space-x-4 font-light">
                     {['About', 'Tech Stack', 'Projects'].map((item) => (
                         <p key={item} className='hidden sm:block hover:border-black hover:border transition duration-300 cursor-pointer px-2 py-1 md:px-4 md:py-1 rounded-full'>
                             {item}
                         </p>
                     ))}
-                    <AnimatedButton text={"Let's Talk"} className={"h-9 md:h-12 text-xs md:text-base px-4 py-1"}/>
+                    <div onClick={()=>window.scrollTo(0, document.body.scrollHeight)}>
+                        <AnimatedButton text={"Let's Talk"} className={"h-9 md:h-12 text-xs md:text-base px-4 py-1"}/>
+                    </div>
                 </div>
             </motion.nav>
             

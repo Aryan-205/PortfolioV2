@@ -8,6 +8,7 @@ import ProjectsPage from './components/ProjectsPage';
 import TechStack from './components/TechStack';
 
 export default function App() {
+
   return (
     <div className="w-full relative">
       <LandingPage/>
