@@ -52,7 +52,7 @@ export default function About() {
       <div className="p-4 md:p-6 h-full md:h-[76%]">
         <div className="flex flex-col md:flex-row justify-center items-center w-full h-full bg-black rounded-[24px] md:rounded-[48px] p-6 md:p-12">
           <img
-            src="/PortfolioV2/Me1.jpeg"
+            src="/Me1.jpeg"
             className="hidden md:block md:h-full rounded-l-2xl object-cover w-full md:w-auto"
             alt="Aryan Bola"
           />
@@ -150,7 +150,7 @@ export default function About() {
                 </motion.svg>
               </div>
               <img
-                src="/PortfolioV2/Me1.jpeg"
+                src="/Me1.jpeg"
                 className="absolute bottom-12 right-12 w-20 h-auto md:hidden rounded-2xl object-cover"
                 alt="Aryan Bola"
               />

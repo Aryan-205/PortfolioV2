@@ -75,7 +75,7 @@ export default function LandingPage() {
             </motion.nav>
             
             <div className='absolute inset-0 w-full h-full flex justify-center items-center'>
-                <motion.img initial={{scale:5, zIndex:10}} animate={{scale:1, zIndex:0}} transition={{duration:0.8, ease:"easeInOut"}} src="/PortfolioV2/bg3.jpeg" className='w-[20rem] md:w-[42rem] h-[32rem] md:h-[36rem]' alt="" />
+                <motion.img initial={{scale:5, zIndex:10}} animate={{scale:1, zIndex:0}} transition={{duration:0.8, ease:"easeInOut"}} src="/bg3.jpeg" className='w-[20rem] md:w-[42rem] h-[32rem] md:h-[36rem]' alt="" />
             </div>
 
             {/* Central Name Text Blocks */}
