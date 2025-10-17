@@ -4,7 +4,7 @@ import {motion} from "motion/react"
 
 const designs = Array.from({ length: 29 }, (_, i) => ({
   id: i + 1,
-  src: `/designs/d${i + 1}.webp`, 
+  src: `/PortfolioV2/designs/d${i + 1}.webp`, 
 }));
 
 const DesignCard = ({ design }) => {

@@ -59,11 +59,15 @@ export default function LandingPage() {
             >
                 <p className="font-light tracking-wide text-xl md:text-2xl">Aryan Bola</p>
                 <div className="flex justify-between items-center space-x-2 md:space-x-4 font-light">
-                    {['About', 'Tech Stack', 'Projects'].map((item) => (
-                        <p key={item} className='hidden sm:block hover:border-black hover:border transition duration-300 cursor-pointer px-2 py-1 md:px-4 md:py-1 rounded-full'>
-                            {item}
-                        </p>
-                    ))}
+                    <button onClick={()=>window.scrollTo(0, 9050)} className='hidden sm:block hover:border-black hover:border transition duration-300 cursor-pointer px-2 py-1 md:px-4 md:py-1 rounded-full'>
+                        About
+                    </button>
+                    <button onClick={()=>window.scrollTo(0, 8300)} className='hidden sm:block hover:border-black hover:border transition duration-300 cursor-pointer px-2 py-1 md:px-4 md:py-1 rounded-full'>
+                        Tech Stack
+                    </button>
+                    <button onClick={()=>window.scrollTo(0, 3800)} className='hidden sm:block hover:border-black hover:border transition duration-300 cursor-pointer px-2 py-1 md:px-4 md:py-1 rounded-full'>
+                        Projects
+                    </button>
                     <div onClick={()=>window.scrollTo(0, document.body.scrollHeight)}>
                         <AnimatedButton text={"Let's Talk"} className={"h-9 md:h-12 text-xs md:text-base px-4 py-1"}/>
                     </div>
@@ -71,7 +75,7 @@ export default function LandingPage() {
             </motion.nav>
             
             <div className='absolute inset-0 w-full h-full flex justify-center items-center'>
-                <motion.img initial={{scale:5, zIndex:10}} animate={{scale:1, zIndex:0}} transition={{duration:0.8, ease:"easeInOut"}} src="/bg3.jpeg" className='w-[20rem] md:w-[42rem] h-[32rem] md:h-[36rem]' alt="" />
+                <motion.img initial={{scale:5, zIndex:10}} animate={{scale:1, zIndex:0}} transition={{duration:0.8, ease:"easeInOut"}} src="/PortfolioV2/bg3.jpeg" className='w-[20rem] md:w-[42rem] h-[32rem] md:h-[36rem]' alt="" />
             </div>
 
             {/* Central Name Text Blocks */}
